@@ -1,0 +1,98 @@
+
+:root {
+  /* Main theme colors */
+  --primary-color: #3949ab;
+  --primary-light: #6f74dd;
+  --primary-dark: #00227b;
+  --secondary-color: #198754;
+  --secondary-light: #64d8cb;
+  --secondary-dark: #00766c;
+  --accent-color: #ff6f00;
+  --accent-light: #ffa040;
+  --accent-dark: #c43e00;
+    --transition-speed: 0.3s;
+    --secondary-color: #5cb85c;
+  --accent-color: #f0ad4e;
+  --error-color: #d9534f;
+  --light-color: #ffffff;
+  --dark-color: #343a40;
+  --gray-color: #6c757d;
+  /* Status colors */
+  --success-color: #43a047;
+  --warning-color: #ff9800;
+  --error-color: #e53935;
+  
+  /* Neutral colors */
+  --light-gray: #f5f5f5;
+  --medium-gray: #e0e0e0;
+  --dark-gray: #757575;
+  --text-primary: #212121;
+  --text-secondary: #757575;
+  
+  /* Spacing (8px system) */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-xxl: 48px;
+  
+  /* Border radius */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 16px;
+  
+  /* Transition */
+  --transition-speed: 0.3s;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 56px; /* For fixed navbar */
+  background-color: #6b6b6b;
+}
+
+/* App Loader */
+.app-loader {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--light-color);
+}
+
+
+/* Form Styles */
+.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.25rem rgba(2, 117, 216, 0.25);
+}
+
+.error-message {
+  color: var(--error-color);
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/* Search and Filter Styles */
+.search-container {
+  background-color: var(--light-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .book-image-container {
+    height: 300px;
+  }
+  
+  .message {
+    max-width: 85%;
+  }
+}

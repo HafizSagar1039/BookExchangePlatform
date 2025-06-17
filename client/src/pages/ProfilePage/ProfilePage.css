@@ -1,0 +1,20 @@
+.profile-header {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.wishlist-item {
+  background-color: white;
+  border-left: 4px solid var(--accent-color);
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 4px;
+  transition: transform var(--transition-speed);
+}
+
+.wishlist-item:hover {
+  transform: translateX(5px);
+}

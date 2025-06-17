@@ -1,0 +1,15 @@
+.dashboard-card {
+  border-left: 4px solid var(--primary-color);
+  transition: transform var(--transition-speed);
+}
+
+.dashboard-card:hover {
+  transform: translateX(5px);
+}
+
+.dashboard-stats {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+}

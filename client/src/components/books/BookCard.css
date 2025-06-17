@@ -1,0 +1,35 @@
+.book-card {
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  height: 100%;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.book-card .card-img-top {
+  height: 250px;
+  object-fit: cover;
+}
+
+.book-status {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.status-available {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.status-unavailable {
+  background-color: var(--error-color);
+  color: white;
+}

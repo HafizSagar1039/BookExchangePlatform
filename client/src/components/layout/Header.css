@@ -1,0 +1,79 @@
+.app-container {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.logo {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  transition: color var(--transition-speed);
+}
+
+.logo:hover {
+  color: var(--accent-color);
+}
+
+/* Desktop Notification */
+.notification-desktop {
+  position: relative;
+  z-index: 1050;
+}
+
+/* Mobile Notification */
+.mobile-notification {
+  position: relative;
+  z-index: 1050;
+  margin-right: 10px;
+}
+
+.notification-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.notification-btn:hover {
+  background-color: #e9ecef;
+  cursor: pointer;
+}
+
+.notification-btn i {
+  font-size: 18px;
+  color: #007bff;
+}
+
+.notification-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 8px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  width: 300px;
+  z-index: 1000;
+}
+
+/* Mobile adjustments */
+@media (max-width: 767.98px) {
+  .notification-dropdown {
+    right: 0;
+    left: auto;
+    width: 280px;
+  }
+  
+  .mobile-notification {
+    order: 1;
+  }
+  
+  .navbar-toggler {
+    order: 2;
+    margin-left: 10px;
+  }
+}

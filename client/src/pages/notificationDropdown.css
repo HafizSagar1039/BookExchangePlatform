@@ -1,0 +1,92 @@
+.notification-container {
+  position: relative;
+  display: inline-block;
+}
+
+.notify-button {
+  position: relative !important;
+  border-radius: 50% !important;
+  width: 35px   !important;
+  height: 35px !important;
+  padding: 0 !important;
+  background-color: #1877f2 !important;
+  color: white !important;
+  border: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2) !important;
+}
+
+.notify-button:hover {
+  background-color: #006eff !important;
+}
+
+.notify-button .badge {
+  position: absolute !important;
+  top: -4px !important;
+  right: -4px !important;
+  background-color: red;
+  color: white !important;
+  font-size: 0.65rem !important;
+  padding: 2px 4px 3px !important;
+  border-radius: 50% !important;
+}
+
+.notification-dropdown {
+  position: absolute !important;
+  right: 0  !important;
+  top: 55px !important;
+  width: 350px !important;;
+  max-height: 400px !important;;
+  overflow-y: auto !important;;
+  background-color: #fff !important;;
+  border-radius: 10px !important;;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;;
+  padding: 15px !important;;
+  z-index: 1000 !important;;
+}
+
+.notification-card {
+  margin-bottom: 8px !important;;
+  padding: 12px !important;;
+  border: none;
+  border-radius: 12px !important;;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;;
+}
+
+
+
+/* Unread Notifications */
+.notification-card.unread {
+  font-weight:600 !important;
+  background-color: #eef6ff !important;
+  border-left: 5px solid #007bff !important;
+}
+
+.notification-card.unread:hover {
+  background-color: #d8ecff !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2) !important;
+}
+
+/* Read Notifications */
+.notification-card.read {
+  font-weight: normal !important;
+  background-color: #f8f9fa !important;
+  border-left: 4px solid #ccc !important;
+}
+
+.notification-card.read:hover {
+  background-color: #e9ecef !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05) !important;
+}
+
+.textmuted{
+  color: #6c757d !important;
+  font-size: 0.8rem !important;
+  font-weight: 500 !important;
+  line-height: 1.5 !important;
+  text-align:right !important;
+}
