@@ -69,7 +69,7 @@ Make sure you have the following installed:
    JWT_EXPIRE=24h
 
    EMAIL_USER=tufailahmedsagar951@gmail.com
-   EMAIL_PASS=hvkj bodx ltao bdgp
+   EMAIL_PASS=""
 
    FRONTEND_URL=http://localhost:5173
    ```
