@@ -65,16 +65,16 @@ router.post(
         ]
       );
 
-      // const token = jwt.sign(
-      //   { userId: result.insertId },
-      //   process.env.JWT_SECRET,
-      //   { expiresIn: process.env.JWT_EXPIRE }
-      // );
+      const token = jwt.sign(
+        { userId: result.insertId },
+        process.env.JWT_SECRET,
+        { expiresIn: process.env.JWT_EXPIRE }
+      );
 
       res.status(201).json({
         success: true,
         message: "User registered successfully",
-        // token,
+        token,
         user: {
           id: result.insertId,
           firstName,

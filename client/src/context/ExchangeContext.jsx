@@ -31,7 +31,6 @@ export const ExchangeProvider = ({ children }) => {
       };
 
       const response = await axios.get(`${API_URL}/exchanges`, config);
-      console.log("Exchanges response:", response.data);
       if (response.data.success) {
         setExchanges(response.data.exchanges);
         return response.data.exchanges;

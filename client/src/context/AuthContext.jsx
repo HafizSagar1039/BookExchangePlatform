@@ -16,7 +16,8 @@ export const AuthProvider = ({ children }) => {
 
   // Load user from token if present
   useEffect(() => {
-    if (token) {
+   
+    if (token) { 
       loadUser();
     } else {
       setLoading(false);
@@ -37,6 +38,7 @@ export const AuthProvider = ({ children }) => {
       const response = await axios.get(`${API_URL}/users/me`, config);
       if (response.data.success) {
         setCurrentUser(response.data.user);
+
       } else {
         // If token is invalid, clear it
         localStorage.removeItem("token");

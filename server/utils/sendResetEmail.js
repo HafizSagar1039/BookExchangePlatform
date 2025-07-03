@@ -1,5 +1,6 @@
 import nodemailer from "nodemailer"
-
+import dotenv from 'dotenv';
+dotenv.config();
 const sendResetEmail = async (toEmail, resetToken) => {
   const resetLink = `${process.env.FRONTEND_URL}/reset-password/${resetToken}`;
   try {

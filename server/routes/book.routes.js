@@ -13,7 +13,7 @@ const router = express.Router();
 router.get("/", async (req, res) => {
   try {
     // Extract query parameters
-    const { search, genre, location } = req.query;
+    const { search, genre } = req.query;
 
     let sql = `
       SELECT b.*, u.first_name as owner_name, u.mobile 
@@ -33,10 +33,6 @@ router.get("/", async (req, res) => {
       params.push(genre);
     }
 
-    if (location) {
-      sql += ` AND u.location LIKE ?`;
-      params.push(`%${location}%`);
-    }
 
     sql += ` ORDER BY b.CreatedAt DESC`;
 

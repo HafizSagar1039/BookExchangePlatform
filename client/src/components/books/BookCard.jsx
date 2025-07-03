@@ -4,9 +4,6 @@ import { Card, Badge } from "react-bootstrap";
 import config from "../../../src/config.js";
 import './BookCard.css'
 const BookCard = ({ book }) => {
-  // Set default image if book image is not available
-  // const bookImage = book.BookImage || defaultBookCover;
-
   // Format date
   const formatDate = (dateString) => {
     return new Date(dateString).toLocaleDateString("en-US", {
@@ -66,7 +63,7 @@ const BookCard = ({ book }) => {
           <div className="d-grid gap-2 mt-2">
             <Link
               to={`/books/${book.BookID}`}
-              className="btn btn-primary btn-sm"
+              className="btn btn-success btn-sm"
             >
               View Details
             </Link>

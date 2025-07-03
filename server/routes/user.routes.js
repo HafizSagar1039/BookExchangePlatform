@@ -7,7 +7,7 @@ const router = express.Router();
 
 // @route   GET api/users/me
 // @desc    Get current user profile
-// @access  Private
+// @access  Private 
 router.get('/me', auth, async (req, res) => {
   try {
     const [users] = await db.query(

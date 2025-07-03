@@ -25,15 +25,18 @@ const HomePage = () => {
 
   // Update displayed books when books or page changes
   useEffect(() => {
+    const start = (page - 1) * 9;
+    const end = page * 9;
+    const newBooks = books.slice(start, end);
+
     if (page === 1) {
-      setDisplayedBooks(books.slice(0, 9)); // First 3 rows (3 books per row)
+      setDisplayedBooks(newBooks);
     } else {
-      setDisplayedBooks((prev) => [
-        ...prev,
-        ...books.slice((page - 1) * 9, page * 9),
-      ]);
+      setDisplayedBooks((prev) => [...prev, ...newBooks]);
     }
-    setHasMore(books.length > displayedBooks.length + 9);
+
+    // ✅ Correct hasMore calculation
+    setHasMore(books.length > page * 9);
   }, [books, page]);
 
   // List of genres
